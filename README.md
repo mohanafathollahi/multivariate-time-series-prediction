@@ -10,6 +10,7 @@ In recent years, some variations of transformers have been introduced to predict
 This limitation is generally not critical for tasks like natural language processing (NLP), where the overall meaning of a sentence remains largely intact even if the word order is altered. However, in time series analysis, where the data lacks inherent semantic meaning, the primary focus is on capturing the temporal dynamics between consecutive points. 
 In this context, the order of the data is essential and plays a critical role in accurately modeling temporal patterns. In this study a simple linear model LTSF-Linear, Dlinear,  could get better results compared to other transformer methods.
 After that another variant of the transformer called the PatchTST could solve the limitations of previous transformer approaches and beat the Dlinear model.<br>
+## Section 2: PatchTST<br>
 In below the main idea behind PatchTST approach have been provided:<br>
 **1. Chanel independence**<br>
 Data set converted from multivariate to univariate. In another word the data which has m*n dimensions converted to m vectors of 1*n dimensions. This process called channel independence means that input token only contains information from a single channel or feature. In the below picture an example of how it works provided. Aditionally, the dimension of real panama dataset mentioned in the below rectangulars. In our dataset we have 16 features which have been collected every hour from 03-01-2015 01:00 until 31-12-2019 23:00. Therefore, in general we have 43775 samples.<br>
@@ -18,4 +19,13 @@ Data set converted from multivariate to univariate. In another word the data whi
 Previous works primarily focus on point-wise attention, which is applied to each element in isolation, without directly considering the relationships between groups of elements or substructures within the sequence. Since a single time step does not carry semantic meaning like a word in a sentence, extracting local semantic information is essential for analyzing the connections between time steps. This new approach emphasizes understanding the relationships between different time steps to effectively extract local semantic information.<br>
 Another important issue to address is the reduction of time and space complexity. In prior works, transformers process entire input tokens, resulting in quadratic complexity. By applying patching, the token with size 𝑁 can be reduced to 𝐿/S, where S refers to the stride. In the diagram below, a look-back window of size 3 is applied, followed by another look-back window after 2 strides. Based on each look-back window, we can predict the next sequence length, which is 2. Patching divides the input into smaller parts, leading to significant savings in complexity.<br>
 ![Channel_independence](Images/patching.png)<br>
+## Section 2: experiment on dataset<br>
+**1. Data preparation:
+The dataset Standardize by removing the mean and scaling to unit variance, to do that the StandardScaler from sklearn has been used.
+Split dataset to three parts:
+2.1. Train: 70%--->30642 samples
+2.2. Validation: 10%----->4378 samples
+2.3. Test: 20%---->8755 samples
+
+
 
