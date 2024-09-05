@@ -11,13 +11,8 @@ This limitation is generally not critical for tasks like natural language proces
 In this context, the order of the data is essential and plays a critical role in accurately modeling temporal patterns. In this study a simple linear model LTSF-Linear, Dlinear,  could get better results compared to other transformer methods.
 After that another variant of the transformer called the PatchTST could solve the limitations of previous transformer approaches and beat the Dlinear model.<br>
 In below the main idea behind PatchTST approach have been provided:<br>
-1. Chanel independence<br>
+**1. Chanel independence**<br>
 Data set converted from multivariate to univariate. In another word the data which has m*n dimensions converted to m vectors of 1*n dimensions. This process called channel independence means that input token only contains information from a single channel or feature.
 
 
-
-
-
-
-These methods have been implemented on 8 popular time series datasets and showd that PatchTST have better result.<br>
 ![test](Images/Channel_independence.png)
