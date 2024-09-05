@@ -1,3 +1,3 @@
 # multivariate-time-series-prediction
 
-![Alt text](Images/Channel_independence.png)
+![test](Images/Channel_independence.png)
