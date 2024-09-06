@@ -32,9 +32,9 @@ There are **no null values** in the dataset, and the only preprocessing step app
 -Test: 20%---->8755 samples<br>
 **3. Train the models:**<br>
 In the `panama_elct.sh` more detail about training parameters such as batch size, number of epochs, learning rate, look back window, prediction length and so on has been provided.<br>
-Some expariments for differnet values of look back window and prediction length have been done and the result provided in below figure.
+Some expariments for differnet values of look back window and prediction length have been done and the result provided in below figure.<br>
 -look back window: [100, 200, 300, 400]<br>
 -Prediction length: [48, 96, 192]<br>
-
-
+![Comparission btw Patchtst and Dlinear](Images/Comparission btw Patchtst and Dlinear.png)<br>
+star: Conclusion from the result:<br>
 
