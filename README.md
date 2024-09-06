@@ -19,13 +19,19 @@ Data set converted from multivariate to univariate. In another word the data whi
 Previous works primarily focus on point-wise attention, which is applied to each element in isolation, without directly considering the relationships between groups of elements or substructures within the sequence. Since a single time step does not carry semantic meaning like a word in a sentence, extracting local semantic information is essential for analyzing the connections between time steps. This new approach emphasizes understanding the relationships between different time steps to effectively extract local semantic information.<br>
 Another important issue to address is the reduction of time and space complexity. In prior works, transformers process entire input tokens, resulting in quadratic complexity. By applying patching, the token with size 𝑁 can be reduced to 𝐿/S, where S refers to the stride. In the diagram below, a look-back window of size 3 is applied, followed by another look-back window after 2 strides. Based on each look-back window, we can predict the next sequence length, which is 2. Patching divides the input into smaller parts, leading to significant savings in complexity.<br>
 ![Channel_independence](Images/patching.png)<br>
-## Section 2: experiment on dataset<br>
-**1. Data preparation:
-The dataset Standardize by removing the mean and scaling to unit variance, to do that the StandardScaler from sklearn has been used.
-Split dataset to three parts:
-2.1. Train: 70%--->30642 samples
-2.2. Validation: 10%----->4378 samples
-2.3. Test: 20%---->8755 samples
+## Section 2: Experiment on dataset<br>
+**1. Data preparation:**<br>
+There are 15 independent features in this data set and 1 dependent feature.<br>
+-Independent features:<br>
+  -12 numerical continuous features which refer to Weather Parameters.<br>
+  -3 categorical variables which are details of the Special days (Holidays, Holidays_ID, School days)<br>
+There are **no null values** in the dataset, and the only preprocessing step applied was standardizing the data by removing the mean and scaling to unit variance. This was done using the `StandardScaler` from `sklearn`.<br>
+**2.Split dataset to three parts:**<br>
+-Train: 70%--->30642 samples<br>
+-Validation: 10%----->4378 samples<br>
+-Test: 20%---->8755 samples<br>
+
+
 
 
 
