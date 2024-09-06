@@ -63,7 +63,7 @@ This part of result can be found in `
 I appreciate the following github repo very much for the valuable code base and datasets:<br>
 1. [https://github.com/yuqinie98/PatchTST?tab=readme-ov-file](https://github.com/yuqinie98/PatchTST?tab=readme-ov-file)<br>
 
-## Section 5: Conclusion - [x] <br>
+## Section 5: Conclusion :heavy_check_mark: <br>
 1. Getting familiar with the new state-of-the-art method called `PatchTST`, which is based on transformers and designed for long-term multivariate time series forecasting.<br>
 2. Comparison performance of PatchTST and Dlinear on the Panama electricity dataset.<br>
 3. Conduct experiments with different parameters, such as look-back window and prediction length, to determine which combination yields the highest accuracy or minimum error.<br>
