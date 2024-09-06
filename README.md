@@ -18,7 +18,8 @@ Data set converted from multivariate to univariate. In another word the data whi
 **2. Patching**<br>
 Previous works primarily focus on point-wise attention, which is applied to each element in isolation, without directly considering the relationships between groups of elements or substructures within the sequence. Since a single time step does not carry semantic meaning like a word in a sentence, extracting local semantic information is essential for analyzing the connections between time steps. This new approach emphasizes understanding the relationships between different time steps to effectively extract local semantic information.<br>
 Another important issue to address is the reduction of time and space complexity. In prior works, transformers process entire input tokens, resulting in quadratic complexity. By applying patching, the token with size 𝑁 can be reduced to 𝐿/S, where S refers to the stride. In the diagram below, a look-back window of size 3 is applied, followed by another look-back window after 2 strides. Based on each look-back window, we can predict the next sequence length, which is 2. Patching divides the input into smaller parts, leading to significant savings in complexity.<br>
-![Channel_independence](Images/patching.png)<br>
+
+<img src="Images/patching.png" alt="patching" width="700"/>
 ## Section 2: Experiment on dataset<br>
 **1. Data preparation:**<br>
 There are 15 independent features in this data set and 1 dependent feature.<br>
@@ -35,7 +36,7 @@ In the `panama_elct.sh` more detail about training parameters such as batch size
 Some expariments for differnet values of look back window and prediction length have been done and the result provided in below figure.<br>
 -look back window: [100, 200, 300, 400]<br>
 -Prediction length: [48, 96, 192]<br>
-<img src="Images/Comparission_btw_Patchtst_and_Dlinear.png" alt="Example Image" width="700"/>
+<img src="Images/Comparission_btw_Patchtst_and_Dlinear.png" alt="Comparission_btw_Patchtst_and_Dlinear" width="700"/>
 
 star: Conclusion from the result:<br>
 
