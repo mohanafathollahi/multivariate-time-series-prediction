@@ -35,7 +35,7 @@ In the `panama_elct.sh` more detail about training parameters such as batch size
 Some expariments for differnet values of look back window and prediction length have been done and the result provided in below figure.<br>
 -look back window: [100, 200, 300, 400]<br>
 -Prediction length: [48, 96, 192]<br>
-![Comparission btw Patchtst and Dlinear](Images/Comparission_btw_Patchtst_and_Dlinear.png)<br>
+<img src="Images/Comparission_btw_Patchtst_and_Dlinear.png" alt="Example Image" width="200"/>
 
 star: Conclusion from the result:<br>
 
