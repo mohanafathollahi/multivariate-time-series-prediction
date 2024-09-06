@@ -26,10 +26,10 @@ Another important issue to address is the reduction of time and space complexity
 **1. Data preparation:**<br>
 There are 15 independent features in this data set and 1 dependent feature.<br>
 -**Independent features:**<br>
-   *12 numerical continuous features which refer to weather parameters.
-   *3 categorical variables which are details of the special days (Holidays, Holidays_ID, School days).
+  >-12 numerical continuous features which refer to weather parameters.<br>
+  >-3 categorical variables which are details of the special days (Holidays, Holidays_ID, School days).<br>
 -**Dependent feature:**<br>
-  *1 feature which refers to the target value or electricity demand based on the weather parameters and special days.
+  >-1 feature which refers to the target value or electricity demand based on the weather parameters and special days.<br>
 There are **no null values** in the dataset, and the only preprocessing step applied was standardizing the data by removing the mean and scaling to unit variance. This was done using the `StandardScaler` from `sklearn`.<br>
 <br>
 **2.Split dataset to three parts:**<br>
