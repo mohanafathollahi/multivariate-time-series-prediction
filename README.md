@@ -38,6 +38,9 @@ Some expariments for differnet values of look back window and prediction length 
 -Prediction length: [48, 96, 192]<br>
 <br>
 <img src="Images/Comparission_btw_Patchtst_and_Dlinear.png" alt="Comparission_btw_Patchtst_and_Dlinear" width="700"  style="margin: 80px;"/>
-
-star: Conclusion from the result:<br>
+<br>
+:star: Conclusion from the result:<br>
+1. Dlinear shows lower performance, or higher MSE, in all cases. However, the performance gap between Dlinear and PatchTST decreases as the prediction length increases to 192, with only a small difference between the two approaches at that point.<br>
+2. When using a larger look-back window, such as 192, the error in predicting future values decreases. In other words, moving from the left side to the right side of the graph corresponds to increasing the look back window and reduction in error.<br>
+3. As the prediction length increases, the accuracy of the model decreases. The highest Mean Squared Error (MSE) occurs when predicting 192 time steps, while the highest accuracy is achieved when predicting the next 48 time steps.<br>
 
