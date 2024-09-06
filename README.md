@@ -39,11 +39,13 @@ There are **no null values** in the dataset, and the only preprocessing step app
 <br>
 **3. Train the models:**<br>
 In the `panama_elct.sh` more detail about training parameters such as batch size, number of epochs, learning rate, look back window, prediction length and so on has been provided.<br>
-Some expariments for differnet values of look back window and prediction length have been done and the result provided in below figure.<br>
+Some expariments for differnet values of look back window and prediction length have been implemented and the result provided in below figure.<br>
 -Look back window: [100, 200, 300, 400]<br>
 -Prediction length: [48, 96, 192]<br>
 <br>
 <img src="Images/Comparission_btw_Patchtst_and_Dlinear.png" alt="Comparission_btw_Patchtst_and_Dlinear" width="700"  style="margin: 80px;"/>
+<br>
+After running `panama_elct.sh`bash script, the MSE result for different combination of values can be found in `result.txt`.
 <br>
 :star: **Conclusion from the above result:**<br>
 1. Dlinear shows lower performance, or higher MSE, in all cases. However, the performance gap between Dlinear and PatchTST decreases as the prediction length increases to 192, with only a small difference between the two approaches at that point.<br>
@@ -52,7 +54,16 @@ Some expariments for differnet values of look back window and prediction length 
 
 **4. Comparission the trend of prediction for two methods:**<br>
 The figures below compare PatchTST and Dlinear when both methods achieve their highest performance. As shown, PatchTST more accurately follows the trend of the ground truth compared to Dlinear.<br>
+This part of result can be found in `
 <br>
- <img src="Images/Trend_Comparssion.png" alt="Trend_Comparssion" width="700"  style="margin: 80px;"/>
+ <img src="Images/Trend_Comparssion.png" alt="Trend_Comparssion" width="700"  style="margin: 80px;"/><br>
   
 
+## Section 4: Acknowledgement<br>
+I appreciate the following github repo very much for the valuable code base and datasets:<br>
+1. [https://github.com/yuqinie98/PatchTST?tab=readme-ov-file](https://github.com/yuqinie98/PatchTST?tab=readme-ov-file)<br>
+
+## Section 5: Conclusion <br>
+1. Getting familiar with the new state-of-the-art method called `PatchTST`, which is based on transformers and designed for long-term multivariate time series forecasting.<br>
+2. Comparison performance of PatchTST and Dlinear on the Panama electricity dataset.<br>
+3. Conduct experiments with different parameters, such as look-back window and prediction length, to determine which combination yields the highest accuracy or minimum error.<br>
