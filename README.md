@@ -36,7 +36,7 @@ There are **no null values** in the dataset, and the only preprocessing step app
 >-Train: 70%--->30642 samples<br>
 >-Validation: 10%----->4378 samples<br>
 >-Test: 20%---->8755 samples<br>
-<br>
+
 **3. Train the models:**<br>
 In the `panama_elct.sh` more detail about training parameters such as batch size, number of epochs, learning rate, look back window, prediction length and so on has been provided.<br>
 Some expariments for differnet values of look back window and prediction length have been implemented and the result provided in below figure.<br>
