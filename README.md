@@ -15,11 +15,13 @@ In below the main idea behind PatchTST approach have been provided:<br>
 **1. Chanel independence**<br>
 Data set converted from multivariate to univariate. In another word the data which has m*n dimensions converted to m vectors of 1*n dimensions. This process called channel independence means that input token only contains information from a single channel or feature. In the below picture an example of how it works provided. Aditionally, the dimension of real panama dataset mentioned in the below rectangulars. In our dataset we have 16 features which have been collected every hour from 03-01-2015 01:00 until 31-12-2019 23:00. Therefore, in general we have 43775 samples.<br>
 ![Channel_independence](Images/Channel_independence.png)<br>
+<br>
 **2. Patching**<br>
 Previous works primarily focus on point-wise attention, which is applied to each element in isolation, without directly considering the relationships between groups of elements or substructures within the sequence. Since a single time step does not carry semantic meaning like a word in a sentence, extracting local semantic information is essential for analyzing the connections between time steps. This new approach emphasizes understanding the relationships between different time steps to effectively extract local semantic information.<br>
 Another important issue to address is the reduction of time and space complexity. In prior works, transformers process entire input tokens, resulting in quadratic complexity. By applying patching, the token with size 𝑁 can be reduced to 𝐿/S, where S refers to the stride. In the diagram below, a look-back window of size 3 is applied, followed by another look-back window after 2 strides. Based on each look-back window, we can predict the next sequence length, which is 2. Patching divides the input into smaller parts, leading to significant savings in complexity.<br>
 
-<img src="Images/patching.png" alt="patching" width="500"/>
+<img src="Images/patching.png" alt="patching" width="500"/><br>
+<br>
 ## Section 3: Experiment on dataset<br>
 **1. Data preparation:**<br>
 There are 15 independent features in this data set and 1 dependent feature.<br>
