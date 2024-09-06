@@ -20,12 +20,14 @@ Previous works primarily focus on point-wise attention, which is applied to each
 Another important issue to address is the reduction of time and space complexity. In prior works, transformers process entire input tokens, resulting in quadratic complexity. By applying patching, the token with size 𝑁 can be reduced to 𝐿/S, where S refers to the stride. In the diagram below, a look-back window of size 3 is applied, followed by another look-back window after 2 strides. Based on each look-back window, we can predict the next sequence length, which is 2. Patching divides the input into smaller parts, leading to significant savings in complexity.<br>
 
 <img src="Images/patching.png" alt="patching" width="500"/>
-## Section 2: Experiment on dataset<br>
+## Section 3: Experiment on dataset<br>
 **1. Data preparation:**<br>
 There are 15 independent features in this data set and 1 dependent feature.<br>
 -Independent features:<br>
-  -12 numerical continuous features which refer to Weather Parameters.<br>
-  -3 categorical variables which are details of the Special days (Holidays, Holidays_ID, School days)<br>
+  -12 numerical continuous features which refer to weather parameters.<br>
+  -3 categorical variables which are details of the special days (Holidays, Holidays_ID, School days)<br>
+-Dependent feature:<br>
+  -1 feature which refers to the target value or electricity demand based on the weather parameters and special days.<br>
 There are **no null values** in the dataset, and the only preprocessing step applied was standardizing the data by removing the mean and scaling to unit variance. This was done using the `StandardScaler` from `sklearn`.<br>
 **2.Split dataset to three parts:**<br>
 -Train: 70%--->30642 samples<br>
@@ -34,13 +36,14 @@ There are **no null values** in the dataset, and the only preprocessing step app
 **3. Train the models:**<br>
 In the `panama_elct.sh` more detail about training parameters such as batch size, number of epochs, learning rate, look back window, prediction length and so on has been provided.<br>
 Some expariments for differnet values of look back window and prediction length have been done and the result provided in below figure.<br>
--look back window: [100, 200, 300, 400]<br>
+-Look back window: [100, 200, 300, 400]<br>
 -Prediction length: [48, 96, 192]<br>
 <br>
 <img src="Images/Comparission_btw_Patchtst_and_Dlinear.png" alt="Comparission_btw_Patchtst_and_Dlinear" width="700"  style="margin: 80px;"/>
 <br>
-:star: Conclusion from the result:<br>
+:star: Conclusion from the above result:<br>
 1. Dlinear shows lower performance, or higher MSE, in all cases. However, the performance gap between Dlinear and PatchTST decreases as the prediction length increases to 192, with only a small difference between the two approaches at that point.<br>
 2. When using a larger look-back window, such as 192, the error in predicting future values decreases. In other words, moving from the left side to the right side of the graph corresponds to increasing the look back window and reduction in error.<br>
 3. As the prediction length increases, the accuracy of the model decreases. The highest Mean Squared Error (MSE) occurs when predicting 192 time steps, while the highest accuracy is achieved when predicting the next 48 time steps.<br>
+
 
