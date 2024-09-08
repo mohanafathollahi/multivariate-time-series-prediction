@@ -1,0 +1,72 @@
+100_48_PatchTST_custom_ftM_sl100_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.3469865024089813, mae:0.34836187958717346, rse:0.5752339363098145
+
+100_96_PatchTST_custom_ftM_sl100_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.42243361473083496, mae:0.3914603292942047, rse:0.6346505284309387
+
+100_192_PatchTST_custom_ftM_sl100_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4830120801925659, mae:0.42576807737350464, rse:0.6794063448905945
+
+100_48_DLinear_custom_ftM_sl100_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.3715132176876068, mae:0.38354283571243286, rse:0.5952169895172119
+
+100_96_DLinear_custom_ftM_sl100_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4430018663406372, mae:0.43115004897117615, rse:0.6499174237251282
+
+100_192_DLinear_custom_ftM_sl100_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4944210350513458, mae:0.46682971715927124, rse:0.6873834729194641
+
+200_48_PatchTST_custom_ftM_sl200_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.33674415946006775, mae:0.34308314323425293, rse:0.5666804313659668
+
+200_96_PatchTST_custom_ftM_sl200_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.40930137038230896, mae:0.3856426775455475, rse:0.6247078776359558
+
+200_192_PatchTST_custom_ftM_sl200_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.46999573707580566, mae:0.42135560512542725, rse:0.6701894402503967
+
+200_48_DLinear_custom_ftM_sl200_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.3525412082672119, mae:0.37117356061935425, rse:0.579819917678833
+
+200_96_DLinear_custom_ftM_sl200_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4225900173187256, mae:0.4182153046131134, rse:0.634768009185791
+
+200_192_DLinear_custom_ftM_sl200_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.474496066570282, mae:0.4542083442211151, rse:0.6733904480934143
+
+300_48_PatchTST_custom_ftM_sl300_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.3347631096839905, mae:0.3421359360218048, rse:0.5650110840797424
+
+300_96_PatchTST_custom_ftM_sl300_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4072665870189667, mae:0.38662832975387573, rse:0.6231530904769897
+
+300_192_PatchTST_custom_ftM_sl300_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.46579688787460327, mae:0.42199140787124634, rse:0.6671890020370483
+
+300_48_DLinear_custom_ftM_sl300_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.35012388229370117, mae:0.3695756793022156, rse:0.5778286457061768
+
+300_96_DLinear_custom_ftM_sl300_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.41868388652801514, mae:0.41634613275527954, rse:0.6318275332450867
+
+300_192_DLinear_custom_ftM_sl300_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4670952558517456, mae:0.44934216141700745, rse:0.6681182384490967
+
+400_48_PatchTST_custom_ftM_sl400_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.3208042085170746, mae:0.3406810462474823, rse:0.5531058311462402
+
+400_96_PatchTST_custom_ftM_sl400_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.39384064078330994, mae:0.38276904821395874, rse:0.6127955913543701
+
+400_192_PatchTST_custom_ftM_sl400_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4562508463859558, mae:0.41988661885261536, rse:0.6603170037269592
+
+400_48_DLinear_custom_ftM_sl400_ll48_pl48_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.34686923027038574, mae:0.36734068393707275, rse:0.575136661529541
+
+400_96_DLinear_custom_ftM_sl400_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.41424790024757385, mae:0.4130233824253082, rse:0.6284714341163635
+
+400_192_DLinear_custom_ftM_sl400_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.4621356427669525, mae:0.4455172121524811, rse:0.6645617485046387
+
