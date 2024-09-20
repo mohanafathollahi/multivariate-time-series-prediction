@@ -1,4 +1,4 @@
-# multivariate-time-series-prediction
+# Multivariate-time-series-prediction
 **Comparison between two state of the art methods in multivariate time series prediction for Panama electricity demand**<br>
 In 2023, two different approaches for time series predictions have been introduced:<br>
 -[Dlinea](https://arxiv.org/abs/2202.07125)<br>
